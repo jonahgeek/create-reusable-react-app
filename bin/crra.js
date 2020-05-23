@@ -5,6 +5,8 @@ const path = require("path");
 const https = require("https");
 const { exec } = require("child_process");
 
+const packageJson = require("../package.json");
+
 const scripts = ` "start": "react-scripts start",
 "build": "react-scripts build",
 "eject": "react-scripts eject"`;
