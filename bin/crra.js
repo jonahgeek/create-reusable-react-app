@@ -7,8 +7,9 @@ const { exec } = require("child_process");
 
 const packageJson = require("../package.json");
 
-const scripts = ` "start": "react-scripts start",
+const scripts = `"start": "react-scripts start",
 "build": "react-scripts build",
+"test": "react-scripts test",
 "eject": "react-scripts eject"`;
 
 const jestConfig = `"license": "ISC",
