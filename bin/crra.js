@@ -11,6 +11,35 @@ const scripts = ` "start": "react-scripts start",
 "build": "react-scripts build",
 "eject": "react-scripts eject"`;
 
+const jestConfig = `"license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/tests/setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\\\.(css|styl|less|sass|scss)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "^.+\\\\.js$": "babel-jest",
+      "^.+\\\\.jsx$": "babel-jest",
+      "\\\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/__mock__/fileTransformer.js"
+    }
+  }`;
+
+/**
+ * we pass the object key dependency || devdependency to this function
+ * @param {object} deps object key that we want to extract
+ * @returns {string} a string of 'dependencies@version'
+ * that we can attach to an `npm i {value}` to install
+ * every dep the exact version speficied in package.json
+ */
 const getDeps = (deps) =>
   Object.entries(deps)
     .map((dep) => `${dep[0]}@${dep[1]}`)
@@ -40,7 +69,8 @@ exec(
         .replace(
           '"test": "echo \\"Error: no test specified\\" && exit 1"',
           scripts
-        );
+        )
+        .replace('"license": "ISC"', jestConfig);
       fs.writeFile(packageJSON, data, (err2) => err2 || true);
     });
 
