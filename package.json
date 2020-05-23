@@ -1,6 +1,6 @@
 {
   "name": "create-reusable-react-app",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "repository": {
     "type": "git",
@@ -24,6 +24,21 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/tests/setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|styl|less|sass|scss)$": "identity-obj-proxy"
+    }
+  },
   "bin": {
     "create-reusable-react-app": "./bin/crra.js"
   },
@@ -38,5 +53,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jonahgeek/create-reusable-react-app/issues"
+  },
+  "homepage": ""
 }
