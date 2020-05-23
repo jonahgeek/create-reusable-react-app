@@ -1,7 +1,8 @@
 {
   "name": "create-reusable-react-app",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
+  "author": "Mwebaze",
   "repository": {
     "type": "git",
     "url": "https://github.com/jonahgeek/create-reusable-react-app.git"
@@ -12,8 +13,7 @@
     "@testing-library/user-event": "^7.1.2",
     "fs-extra": "^9.0.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-dom": "^16.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,7 +40,7 @@
     }
   },
   "bin": {
-    "create-reusable-react-app": "./bin/crra.js"
+    "create-reusable-react-app": "./bin/mwebaze.js"
   },
   "browserslist": {
     "production": [
@@ -57,5 +57,8 @@
   "bugs": {
     "url": "https://github.com/jonahgeek/create-reusable-react-app/issues"
   },
-  "homepage": ""
+  "homepage": "",
+  "devDependencies": {
+    "react-scripts": "^3.4.1"
+  }
 }
