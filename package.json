@@ -8,9 +8,7 @@
     "url": "https://github.com/jonahgeek/create-reusable-react-app.git"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "cli-progress": "^3.8.2",
     "fs-extra": "^9.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
