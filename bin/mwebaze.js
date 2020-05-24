@@ -55,7 +55,7 @@ exec(
     console.log("npm init -- done\n");
     // installing dependencies
     // installDepsDev(["react-scripts"]);
-    install(["react", "react-dom", "react-scripts", "skeleton"]);
+    install(["react", "react-dom", "react-scripts", "styled-components"]);
 
     // console.log("Copying additional files..");
     // copy additional source files
